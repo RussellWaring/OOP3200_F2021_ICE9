@@ -162,16 +162,31 @@ public class Vector2D
         return new Vector2D(1.0f, 0.0f);
     }
 
+    /**
+     * Move up
+     * @return
+     */
     public static Vector2D up()
     {
         return new Vector2D(0.0f, 1.0f);
     }
 
+    /**
+     * Move down
+     * @return
+     */
     public static Vector2D down()
     {
         return new Vector2D(0.0f, -1.0f);
     }
 
+    /**
+     * Linear interpolation ?
+     * @param a
+     * @param b
+     * @param t
+     * @return
+     */
     public static Vector2D lerp(final Vector2D a, final Vector2D b, float t)
     {
         // clamp t between 0.0 and 1.0
@@ -191,6 +206,12 @@ public class Vector2D
         return (float)((double)(lhs.getX()) * (double)(rhs.getX()) + (double)(lhs.getY()) * (double)(rhs.getY()));
     }
 
+    /**
+     * Calculates distance between to Vector2ds
+     * @param a vector uno
+     * @param b vector dos
+     * @return the distance between the vector2ds
+     */
     public static float distance(final Vector2D a, final Vector2D b)
     {
         final var delta_x = (double)(b.getX()) - (double)(a.getX());
